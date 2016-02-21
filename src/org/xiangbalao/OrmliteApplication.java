@@ -1,5 +1,6 @@
 package org.xiangbalao;
 
+import org.xiangbalao.bean.City;
 import org.xiangbalao.bean.DataTest;
 import org.xiangbalao.bean.User;
 import org.xiangbalao.common.db.DatabaseHelper;
@@ -15,11 +16,15 @@ public class OrmliteApplication extends Application {
 			.getExternalStorageDirectory().getAbsolutePath()
 			+ "/xiangbalaotest.db";
 
+	// + "/city.db";
+
 	@Override
 	public void onCreate() {
 		// 初始化
 		DatabaseHelper.initialize(databasesPath, 1, new Class<?>[] {
-				DataTest.class, User.class });
+				DataTest.class, User.class, City.class
+
+		});
 		super.onCreate();
 
 	}

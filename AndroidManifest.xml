@@ -4,13 +4,6 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
-    <uses-sdk
-        android:minSdkVersion="14"
-        android:targetSdkVersion="19" />
-
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-
     <application
         android:name="org.xiangbalao.OrmliteApplication"
         android:icon="@drawable/ic_launcher" >
@@ -18,11 +11,28 @@
             android:name="org.xiangbalao.OmliteActivity"
             android:label="Ormlite"
             android:theme="@android:style/Theme.NoTitleBar" >
+
+           
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            
+        </activity>
+        <activity
+            android:name="org.xiangbalao.OmliteCityActivity"
+            android:label="Ormlite"
+            android:theme="@android:style/Theme.NoTitleBar" >
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+
         </activity>
     </application>
 
